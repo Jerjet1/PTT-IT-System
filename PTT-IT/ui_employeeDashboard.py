@@ -210,6 +210,9 @@ class Ui_employeeDashboard(object):
         __qtablewidgetitem4.setFont(font);
         self.products.setHorizontalHeaderItem(4, __qtablewidgetitem4)
         self.products.setObjectName(u"products")
+        self.products.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        products_header = self.products.horizontalHeader()
+        products_header.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
         self.products.setStyleSheet(u" QTableWidget {\n"
 "background-color: rgba(255, 255, 255, 200); /* Semi-transparent white */\n"
 "gridline-color: rgba(0, 0, 0, 50); /* Semi-transparent grid lines */\n"

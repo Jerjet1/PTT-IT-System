@@ -49,16 +49,6 @@ class Ui_managerDashboard(object):
 
         self.verticalLayout_3.addWidget(self.historyButton_2)
 
-        self.serviceReportButton_2 = QPushButton(self.navigationPanel)
-        self.serviceReportButton_2.setObjectName(u"serviceReportButton_2")
-
-        self.verticalLayout_3.addWidget(self.serviceReportButton_2)
-
-        self.purchaseButton_2 = QPushButton(self.navigationPanel)
-        self.purchaseButton_2.setObjectName(u"purchaseButton_2")
-
-        self.verticalLayout_3.addWidget(self.purchaseButton_2)
-
         self.verticalSpacer_2 = QSpacerItem(20, 40, QSizePolicy.Policy.Minimum, QSizePolicy.Policy.Expanding)
 
         self.verticalLayout_3.addItem(self.verticalSpacer_2)
@@ -143,9 +133,8 @@ class Ui_managerDashboard(object):
         self.products_2.setHorizontalHeaderItem(5, __qtablewidgetitem5)
         self.products_2.setObjectName(u"products_2")
         self.products_2.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.products_2.horizontalHeader().setCascadingSectionResizes(False)
-        self.products_2.horizontalHeader().setDefaultSectionSize(156)
-        self.products_2.horizontalHeader().setStretchLastSection(False)
+        inventory_header = self.products_2.horizontalHeader()
+        inventory_header.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.verticalLayout_5.addWidget(self.products_2)
 
@@ -219,8 +208,8 @@ class Ui_managerDashboard(object):
         self.employees.setHorizontalHeaderItem(5, __qtablewidgetitem11)
         self.employees.setObjectName(u"employees")
         self.employees.setEditTriggers(QAbstractItemView.NoEditTriggers)
-        self.employees.horizontalHeader().setDefaultSectionSize(186)
-        self.employees.horizontalHeader().setStretchLastSection(False)
+        employee_header = self.employees.horizontalHeader()
+        employee_header.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.verticalLayout_7.addWidget(self.employees)
 
@@ -273,10 +262,13 @@ class Ui_managerDashboard(object):
         __qtablewidgetitem18 = QTableWidgetItem()
         self.history.setHorizontalHeaderItem(6, __qtablewidgetitem18)
         self.history.setObjectName(u"history")
+        self.history.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        history_header = self.history.horizontalHeader()
+        history_header.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
 
         self.verticalLayout_9.addWidget(self.history)
 
-        self.historyList.addTab(self.PurchaseHistory, "")
+        self.historyList.addTab(self.PurchaseHistory, "Purchase History")
         self.ServiceHistory = QWidget()
         self.ServiceHistory.setObjectName(u"ServiceHistory")
         self.verticalLayout = QVBoxLayout(self.ServiceHistory)
@@ -299,10 +291,14 @@ class Ui_managerDashboard(object):
         __qtablewidgetitem25 = QTableWidgetItem()
         self.history_2.setHorizontalHeaderItem(6, __qtablewidgetitem25)
         self.history_2.setObjectName(u"history_2")
+        self.history_2.setEditTriggers(QAbstractItemView.NoEditTriggers)
+        history2_header = self.history_2.horizontalHeader()
+        history2_header.setSectionResizeMode(QHeaderView.ResizeMode.Stretch)
+
 
         self.verticalLayout.addWidget(self.history_2)
 
-        self.historyList.addTab(self.ServiceHistory, "")
+        self.historyList.addTab(self.ServiceHistory, "Service History")
 
         self.verticalLayout_8.addWidget(self.historyList)
 
@@ -325,8 +321,6 @@ class Ui_managerDashboard(object):
         self.inventoryButton_2.setText(QCoreApplication.translate("Form", u"Inventory", None))
         self.employeeButton_2.setText(QCoreApplication.translate("Form", u"Employee", None))
         self.historyButton_2.setText(QCoreApplication.translate("Form", u"History", None))
-        self.serviceReportButton_2.setText(QCoreApplication.translate("Form", u"Service Report", None))
-        self.purchaseButton_2.setText(QCoreApplication.translate("Form", u"Purchase", None))
         self.logOutButton_2.setText(QCoreApplication.translate("Form", u"Log Out", None))
         self.addItemButton_2.setText(QCoreApplication.translate("Form", u"Add Item", None))
         self.searchBar_2.setPlaceholderText(QCoreApplication.translate("Form", u"Product Name...", None))
@@ -390,6 +384,7 @@ class Ui_managerDashboard(object):
         ___qtablewidgetitem24.setText(QCoreApplication.translate("Form", u"Charge", None));
         ___qtablewidgetitem25 = self.history_2.horizontalHeaderItem(6)
         ___qtablewidgetitem25.setText(QCoreApplication.translate("Form", u"Date", None));
-        self.historyList.setTabText(self.historyList.indexOf(self.ServiceHistory), QCoreApplication.translate("Form", u"Page", None))
+        self.historyList.setTabText(self.historyList.indexOf(self.PurchaseHistory), QCoreApplication.translate("Form", u"Purchase History", None))
+        self.historyList.setTabText(self.historyList.indexOf(self.ServiceHistory), QCoreApplication.translate("Form", u"Service History", None))
     # retranslateUi
 
