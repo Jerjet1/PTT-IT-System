@@ -24,7 +24,7 @@ class Ui_LoginPage(object):
         if not LoginPage.objectName():
             LoginPage.setObjectName(u"LoginPage")
         LoginPage.resize(870, 618)
-        LoginPage.setMaximumSize(QSize(1000, 800))
+        LoginPage.setMaximumSize(QSize(600, 600))
         LoginPage.setStyleSheet(u"QWidget{\n"
 " background-color: rgb(183, 181, 151);\n"
 "}")
@@ -105,6 +105,7 @@ class Ui_LoginPage(object):
         self.verticalLayout_2.addWidget(self.errorMessage)
 
         self.user = QLineEdit(self.loginForm)
+        self.user.setClearButtonEnabled(True)
         self.user.setObjectName(u"user")
         self.user.setMaximumSize(QSize(175, 16777215))
         font1 = QFont()
@@ -126,6 +127,8 @@ class Ui_LoginPage(object):
         self.verticalLayout_2.addWidget(self.user)
 
         self.password = QLineEdit(self.loginForm)
+        self.password.setEchoMode(QLineEdit.Password)
+        self.password.setClearButtonEnabled(True)
         self.password.setObjectName(u"password")
         self.password.setMaximumSize(QSize(175, 16777215))
         self.password.setFont(font1)
