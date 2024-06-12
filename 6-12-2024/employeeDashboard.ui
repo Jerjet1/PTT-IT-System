@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>employeeDashboard</class>
+ <widget class="QWidget" name="employeeDashboard">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1149</width>
+    <height>666</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+background-color:rgb(183, 181, 151);
+}</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item alignment="Qt::AlignLeft">
+    <widget class="QFrame" name="navigationPanel">
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+background-color: rgb(107, 138, 122);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <widget class="QPushButton" name="serviceReportButton">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(218, 211, 190);
+color: black;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+font-size:16px;
+text-align: center;
+width: 120px
+}
+
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 0.1);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Service Report</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="purchaseButton">
+        <property name="maximumSize">
+         <size>
+          <width>150</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(218, 211, 190);
+color: black;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+font-size:16px;
+text-align: center;
+width: 120px;
+}
+
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 0.1);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Purchase</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeType">
+         <enum>QSizePolicy::Expanding</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>473</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QPushButton" name="logOutButton">
+        <property name="styleSheet">
+         <string notr="true">QPushButton{
+background-color: rgb(218, 211, 190);
+color: black;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+font-size:16px;
+text-align: center;
+margin-left:5px;
+margin-right:5px;
+}
+
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 0.1);
+}
+</string>
+        </property>
+        <property name="text">
+         <string>Log Out</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="inventoryFrame">
+     <property name="styleSheet">
+      <string notr="true">QFrame{
+background-color: rgb(107, 138, 122);
+}</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QFrame" name="inventoryNavigation">
+        <property name="styleSheet">
+         <string notr="true">QFrame{
+	background-color: rgb(183, 181, 151);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QGridLayout" name="gridLayout">
+         <item row="0" column="2">
+          <widget class="QPushButton" name="searchButton">
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color: rgb(218, 211, 190);
+color: black;
+border: 1px solid rgba(255, 255, 255, 0.5);
+border-radius: 5px;
+font-size:16px;
+text-align: center;
+width: 100px
+}
+
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 0.1);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Search</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="0">
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Expanding</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="searchBar">
+           <property name="maximumSize">
+            <size>
+             <width>500</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QLineEdit{
+background-color: rgb(218, 211, 190);
+width:250px;
+font-size:16px;
+}</string>
+           </property>
+           <property name="placeholderText">
+            <string>Product Name...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="inventoryList">
+        <property name="styleSheet">
+         <string notr="true">QFrame{
+background-color: rgb(183, 181, 151);
+}</string>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_2">
+         <item>
+          <widget class="QTableWidget" name="products">
+           <property name="styleSheet">
+            <string notr="true"> QTableWidget {
+background-color: rgba(255, 255, 255, 200); /* Semi-transparent white */
+gridline-color: rgba(0, 0, 0, 50); /* Semi-transparent grid lines */
+}
+
+QHeaderView::section {
+background-color: rgba(255, 255, 255, 180); /* Semi-transparent header */
+}</string>
+           </property>
+           <property name="verticalScrollBarPolicy">
+            <enum>Qt::ScrollBarAsNeeded</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="sizeAdjustPolicy">
+            <enum>QAbstractScrollArea::AdjustToContents</enum>
+           </property>
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <attribute name="horizontalHeaderVisible">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="horizontalHeaderDefaultSectionSize">
+            <number>190</number>
+           </attribute>
+           <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="horizontalHeaderStretchLastSection">
+            <bool>true</bool>
+           </attribute>
+           <attribute name="verticalHeaderCascadingSectionResizes">
+            <bool>false</bool>
+           </attribute>
+           <attribute name="verticalHeaderShowSortIndicator" stdset="0">
+            <bool>false</bool>
+           </attribute>
+           <column>
+            <property name="text">
+             <string>Product ID</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Quantity</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Price</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Category</string>
+            </property>
+            <property name="font">
+             <font>
+              <family>Arial</family>
+              <pointsize>10</pointsize>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
